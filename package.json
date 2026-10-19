@@ -1,0 +1,9 @@
+{
+  "name": "jefferson-machado-crm",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page do CRM de Jefferson Machado.",
+  "scripts": {
+    "test": "node --test tests/site.test.js"
+  }
+}

@@ -1,0 +1,22 @@
+# Jefferson Machado CRM
+
+> CRM para micro e pequenas empresas que precisam organizar clientes, WhatsApp, follow-ups e o funil de atendimento.
+
+Site oficial: https://jorgediasdsg.github.io/jefferson-machado-crm/
+
+## O que é
+
+Jefferson Machado desenvolve aplicações de CRM com foco em dar clareza à operação de micro e pequenas empresas. A solução ajuda a estruturar a base de clientes, acompanhar o atendimento e manter visível o próximo passo de cada contato.
+
+## Benefícios apresentados
+
+- Base de clientes organizada.
+- Histórico e contexto do atendimento em um só lugar.
+- Acompanhamento de contatos que chegam pelo WhatsApp.
+- Funil de atendimento com etapas claras.
+- Follow-ups e próximos passos visíveis.
+
+## Contato
+
+- WhatsApp: +55 48 99113-8058
+- E-mail: jeffersonmachado81@gmail.com

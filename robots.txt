@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jorgediasdsg.github.io/jefferson-machado-crm/sitemap.xml
