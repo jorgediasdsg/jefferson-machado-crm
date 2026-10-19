@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 test('public landing page assets exist', () => {
-  for (const file of ['index.html', 'styles.css', 'script.js', '.nojekyll', 'sitemap.xml', 'robots.txt', 'llms.txt']) {
+  for (const file of ['index.html', 'styles.css', 'script.js', 'favicon.svg', '.nojekyll', 'sitemap.xml', 'robots.txt', 'llms.txt']) {
     assert.equal(fs.existsSync(path.join(root, file)), true, `missing ${file}`);
   }
 });
@@ -22,6 +22,7 @@ test('landing page exposes the conversion path and core sections', () => {
   }
   assert.match(html, /https:\/\/wa\.me\/5548991138058/);
   assert.match(html, /mailto:jeffersonmachado81@gmail\.com/);
+  assert.match(html, /rel=["']icon["'][^>]+favicon\.svg/);
   assert.match(html, /href=["']styles\.css["']/);
   assert.match(html, /src=["']script\.js["']/);
 });
