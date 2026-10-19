@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 test('public landing page assets exist', () => {
-  for (const file of ['index.html', 'styles.css', 'script.js', 'favicon.svg', '.nojekyll', 'sitemap.xml', 'robots.txt', 'llms.txt']) {
+  for (const file of ['index.html', 'styles.css', 'script.js', 'favicon.svg', 'social-preview.png', '.nojekyll', 'sitemap.xml', 'robots.txt', 'llms.txt']) {
     assert.equal(fs.existsSync(path.join(root, file)), true, `missing ${file}`);
   }
 });
@@ -17,6 +17,10 @@ test('landing page exposes the conversion path and core sections', () => {
 
   assert.match(html, /<title>[^<]*CRM[^<]*Jefferson Machado/i);
   assert.match(html, /<main\b/);
+  assert.match(html, /property=["']og:image["'][^>]+social-preview\.png/);
+  assert.match(html, /property=["']og:image:width["'][^>]+1200/);
+  assert.match(html, /property=["']og:image:height["'][^>]+630/);
+  assert.match(html, /name=["']twitter:image["'][^>]+social-preview\.png/);
   for (const id of ['solucao', 'beneficios', 'como-funciona', 'recursos', 'duvidas', 'contato']) {
     assert.match(html, new RegExp(`id=["']${id}["']`), `missing section ${id}`);
   }
